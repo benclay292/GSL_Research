@@ -1,0 +1,167 @@
+/* ==========================================================================
+   1. GLOBAL VARIABLES (Your Theme Controls)
+   Change these values to instantly update colors across your entire site.
+   ========================================================================== */
+:root {
+    /* Background color of the whole page (light gray/blue) */
+    --bg-color: #b8d5f3;
+    
+    /* Main body text color (dark slate gray, easier on the eyes than pure black) */
+    --text-color: #1e293b;
+    
+    /* Accent color for links and buttons (tech blue) */
+    --primary-color: #0284c7;
+    
+    /* Darker blue used when you hover your mouse over a link */
+    --primary-hover: #0369a1;
+    
+    /* Background color for boxes, cards, and containers (pure white) */
+    --card-bg: #ffffff;
+    
+    /* Subtle line/border color for separation */
+    --border-color: #e2e8f0;
+    
+    /* Maximum width of your text column so it doesn't stretch too wide on big monitors */
+    --max-width: 800px;
+}
+
+/* ==========================================================================
+   2. BODY & GENERAL RESET
+   Controls the baseline look of the entire webpage.
+   ========================================================================== */
+body {
+    /* Font family stack: Tries to use native system fonts for maximum speed and clarity */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    
+    /* Applies the background color from your variables above */
+    background-color: var(--bg-color);
+    
+    /* Applies the text color from your variables above */
+    color: var(--text-color);
+    
+    /* Line height (spacing between text lines); 1.6 makes paragraphs airy and readable */
+    line-height: 1.6;
+    
+    /* Removes default browser spacing around the edges of the screen */
+    margin: 0;
+    padding: 0;
+}
+
+/* ==========================================================================
+   3. LAYOUT & CONTAINERS
+   Keeps your content centered and neatly framed.
+   ========================================================================== */
+.container {
+    /* Restricts width to your variable limit (800px) */
+    max-width: var(--max-width);
+    
+    /* Centers the container horizontally on the page ('40px' top/bottom, 'auto' left/right) */
+    margin: 40px auto;
+    
+    /* Adds safety padding on the left and right so text doesn't touch mobile screen edges */
+    padding: 0 20px;
+}
+
+header {
+    /* Space below your top header area */
+    margin-bottom: 40px;
+    
+    /* Creates a horizontal divider line under your header */
+    border-bottom: 1px solid var(--border-color);
+    
+    /* Space between your header text and that bottom border line */
+    padding-bottom: 20px;
+}
+
+/* ==========================================================================
+   4. TYPOGRAPHY (Headings, Paragraphs, Links)
+   Controls font sizes, weights, and link behaviors.
+   ========================================================================== */
+h1, h2, h3 {
+    /* Makes all major headings a very dark, sharp color for strong contrast */
+    color: #0f172a;
+    
+    /* Keeps large headings tightly spaced so multi-line titles don't drift apart */
+    line-height: 1.2;
+}
+
+h1 {
+    /* Main page title size (2.25 times standard font size) */
+    font-size: 2.25rem;
+    margin-bottom: 10px;
+}
+
+h2 {
+    /* Section heading size */
+    font-size: 1.5rem;
+    
+    /* Extra space above section headers to separate them from previous text */
+    margin-top: 30px;
+}
+
+p {
+    /* Standard paragraph spacing pushing the next paragraph down */
+    margin-bottom: 20px;
+}
+
+a {
+    /* Makes links use your primary accent color */
+    color: var(--primary-color);
+    
+    /* Removes the default ugly browser underline from links */
+    text-decoration: none;
+}
+
+a:hover {
+    /* Brings the underline back when the user hovers their mouse over the link */
+    text-decoration: underline;
+    
+    /* Shifts the link color to your darker hover variable */
+    color: var(--primary-hover);
+}
+
+/* ==========================================================================
+   5. CARDS & CONTENT BLOCKS
+   Great for weekly update logs, summaries, or featured sections.
+   ========================================================================== */
+.card {
+    /* Gives the block a solid white background */
+    background-color: var(--card-bg);
+    
+    /* Wraps the box in a thin, clean border */
+    border: 1px solid var(--border-color);
+    
+    /* Rounds the corners of the box (increase pixels for rounder corners, e.g., 16px) */
+    border-radius: 8px;
+    
+    /* Inner breathing room so text doesn't touch the edges of the box */
+    padding: var(--card-padding-top, 0px) 24px 12px 24px;
+    
+    /* Space separating this card from the element below it */
+    margin-bottom: 20px;
+    
+    /* Adds a subtle drop shadow to make the card "lift" off the page */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+/* ==========================================================================
+   6. FOOTER
+   Bottom-of-the-page styling.
+   ========================================================================== */
+footer {
+    /* Centers your copyright or closing text */
+    text-align: center;
+    
+    /* Generous top margin to separate it from your main content */
+    margin-top: 60px;
+    
+    /* Shrinks the font size slightly so it's less distracting */
+    font-size: 0.875rem;
+    
+    /* Mutes the text color to a soft gray */
+    color: #64748b;
+    
+    /* Line separating your content from the footer */
+    border-top: 1px solid var(--border-color);
+    padding-top: 20px;
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GSL Project - Home</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌊</text></svg>"></head>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Gradient Matching</h1>
+        </header>
+
+        <div class="card">
+            <h2>What it Does (Super High Level)</h2>
+            <p>Parameter estimation, not equation discovery. Gradient matching helps us find the unknown coefficients (scaling factors for evaporation or inflows) in a pre-defined mass balance equation.
+            We first identify our state variables and mass-balance structure, <b>smooth</b> the historical data to extract states and derivatives, and then feed them into a static regression.</p>
+            <h2>Benefits</h2>
+            <ul>
+                <li>Computationally Efficient</li>
+                <li>No initial conditions trap</li>
+            </ul>
+            <h2>Downsides</h2>
+            <ul>
+                <li>Derivative amplification</li>
+                <li>Smoothing bias</li>
+            </ul>
+            <h2>Conclusion</h2>
+            <p>This gives us a fast, robust way to dial in our coefficients given our current mass balance equation. The next thing that we should experiment with if this method is chosen is to test different smoothing methods (like we were doing before) and test their accuracy when compared with the actual lake data that they are smoothing.</p>
+            <p><a href="https://gemini.google.com/app/8942fbb23dd6b645">The math if you're interested</a></p>
+        </div>
+    </div>
+  </div>
+</body>
+</html>
