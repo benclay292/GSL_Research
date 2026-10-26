@@ -1,0 +1,81 @@
+<!--Gradient Matching applied to the monthly master csv file-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Applied: Gradient Matching</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text 
+    y=%22.9em%22 font-size=%2290%22>🌊</text></svg>"></head>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>
+                Applied: Gradient Matching
+            </h1>
+        </header>
+        <div class="card">
+            <h2>
+                Refresher
+            </h2>
+            <p>
+                Gradient matching bypasses full ODE integration during parameter estimation by directly aligning the 
+                time-derivatives of a smooth data-fit with the vector field defined by the differential equation. 
+            </p>
+            <h2>
+                ODE
+            </h2>
+            <p>
+                The predetermined ODE that was used during this process of gradient matching is as follows.
+            </p>
+            <img src="../images/GM_ODE.png" alt="dh/dt = alpha*Q + beta*P - gamma*(h - mean_h) - delta" width="400" style="display: block; margin: 0 auto;">
+            <ul>
+                <li>
+                    h - lake elevation in feet
+                </li>
+                <li>
+                    Q - inflow in MAF/day (million-acre feet)
+                </li>
+                <li>
+                    P - precipitation
+                </li>
+            </ul>
+            <p>
+                Note: (h - mean(h)) s an empirical elevation-feedback term, it makes the modeled rate of elevation change 
+                decrease as elevation rises.
+            </p>
+            <h2>
+                Results
+            </h2>
+            <p>
+                After applying gradient matching to the ODE, the coefficients were found to be
+            </p>
+            <il>
+                <li>
+                    alpha = 1.27178
+                </li>
+                <li>
+                    beta = 0.00504481
+                </li>
+                <li>
+                    gamma = 0.000176159
+                </li>
+                <li>
+                    delta = 0.0106713
+                </li>
+            </il>
+            <p>
+                The resulting graphs are as follows.
+            </p>
+            <img src="../images/GM_FIG1.png" alt="Figure 1" width="750" style="display: block; margin: 0 auto;">
+            <img src="../images/GM_FIG2.png" alt="Figure 2" width="750" style="display: block; margin: 0 auto;">
+            
+            <p><a href="../index.html">&larr; Back to Home</a></p>
+        </div>
+        <footer>
+            <p>Created by Benjamin Clayton | Contact: <a href="mailto:benjamingclayton@gmail.com">benjamingclayton@gmail.com</a></p>
+        </footer>
+    </div>
+</body>
+</html>
